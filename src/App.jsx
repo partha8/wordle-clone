@@ -8,9 +8,9 @@ export const App = () => {
     <div className="App">
       <nav>
         <h1>Wordle</h1>
-        <Board />
-        <Keyboard />
       </nav>
+      <Board />
+      <Keyboard />
     </div>
   );
 };
