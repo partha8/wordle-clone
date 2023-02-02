@@ -21,8 +21,7 @@ export const StateProvider = ({ children }) => {
     });
   }, []);
 
-  console.log(wordSet);
-  console.log(correctWord);
+  console.log(correctWord, "correctWord");
 
   const onEnter = () => {
     if (currAttempt.letter !== 5) return;
@@ -31,8 +30,6 @@ export const StateProvider = ({ children }) => {
     for (let i = 0; i < 5; i++) {
       currWord += board[currAttempt.attempt][i];
     }
-
-    // currWord = currWord + "\r";
 
     if (wordSet.has(currWord.toLowerCase())) {
       setCurrAttempt({ attempt: currAttempt.attempt + 1, letter: 0 });
